@@ -1,0 +1,11 @@
+DESCRIPTION="Common resources for FOSS graphics programs"
+HOMEPAGE="http://create.freedesktop.org/"
+SRC_URI="http://create.freedesktop.org/releases/create/${P}.tar.bz2"
+
+src_compile() { :; }
+
+src_install() {
+	cd ${S}
+	dodir /usr
+	scons -Q install PREFIX=${D}/usr
+}
